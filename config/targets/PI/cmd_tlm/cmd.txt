@@ -1,0 +1,450 @@
+COMMAND PI SCIENCE_MODE_CMD LITTLE_ENDIAN "Commands SPORT board to switch to science mode"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI IDLE_CMD LITTLE_ENDIAN "Commands SPORT board to switch to Idle Mode"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 275  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI CALIBRATE_CMD LITTLE_ENDIAN "Commands SPORT board to switch to Calibrate Mode"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 274  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI CONFIG_CMD LITTLE_ENDIAN "Commands SPORT board to switch to Config Mode"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 273  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+
+# for numbered science packets, see Command and Telemetry Dictionary Table 
+	
+COMMAND PI SCIENCE_MODE_01 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 1"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 31 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_02 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 2"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 15 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_03 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 3"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 23 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_04 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 4"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 7 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_05 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 5"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 27 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_06 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 6"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 11 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_07 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 7"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 19 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_08 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 8"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 3 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_09 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 9"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 29 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_10 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 10"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 13 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_11 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 11"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 21 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_12 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 12"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 5 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_13 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 13"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 25 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_14 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 14"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 9 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_15 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 15"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 17 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_16 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 16"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 1 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_17 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 17"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 28 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_18 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 18"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 12 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_19 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 19"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 20 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_20 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 20"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 4 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_21 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 21"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 24 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_22 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 22"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 8 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_23 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 23"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 16 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	
+COMMAND PI SCIENCE_MODE_24 LITTLE_ENDIAN "Commands SPORT board to switch to science mode 24"
+    ID_PARAMETER HEAD_APID               13  11  UINT 272 304 272  "APID for Set Science mode command 0x110"
+    PARAMETER HEAD_SecHeaderFlag         12  1   UINT 0 0 0                                                
+    PARAMETER HEAD_PktType               11  1   UINT 1 1 1
+    PARAMETER HEAD_VERSION               8   3   UINT 0 0 0
+    PARAMETER HEAD_SeqCount              26  14  UINT 0 16383 0
+    PARAMETER HEAD_Sequence              24  2   UINT 3 3 3
+    PARAMETER HEAD_LENGTH                32  16  UINT 2 1000 7
+    APPEND_PARAMETER DATA_BYTE1           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE2           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE3           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE4           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE5           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER DATA_BYTE6           8    UINT 0 256 0 "Byte to set"
+    APPEND_PARAMETER CHECK_SUM              16   UINT 0 65536 0 "Checksum"
+	

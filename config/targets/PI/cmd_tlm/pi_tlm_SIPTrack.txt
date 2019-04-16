@@ -1,0 +1,315 @@
+TELEMETRY PI SIP_Track LITTLE_ENDIAN "SIP Track Packet"
+    ID_ITEM HEAD_APID                   13  11  UINT 36 "Expected APID for Status Packet 0x20"
+    ITEM HEAD_SecHeaderFlag             12  1   UINT                                                
+    ITEM HEAD_PktType                   11  1   UINT
+    ITEM HEAD_VERSION                   8   3   UINT
+    ITEM HEAD_SeqCount                  26  14  UINT 
+    ITEM HEAD_Sequence                  24  2   UINT
+    ITEM HEAD_LENGTH                    32  16  UINT
+
+    ITEM SysClock                       48  32  UINT
+
+    APPEND_ITEM Track_msb_0             16      UINT
+		UNITS Frequency f
+		# these limits are as follows: lower red, lower yellow, upper yellow, upper red
+		LIMITS DEFAULT 1 ENABLED 4.0 4.6 5.4 6.0
+    APPEND_ITEM Track_lsb_0             16      UINT
+
+    APPEND_ITEM Track_msb_1             16      UINT
+    APPEND_ITEM Track_lsb_1             16      UINT
+    
+    APPEND_ITEM Track_msb_2             16      UINT
+    APPEND_ITEM Track_lsb_2             16      UINT
+    
+    APPEND_ITEM Track_msb_3             16      UINT
+    APPEND_ITEM Track_lsb_3             16      UINT
+    
+    APPEND_ITEM Track_msb_4             16      UINT
+    APPEND_ITEM Track_lsb_4             16      UINT
+    
+    APPEND_ITEM Track_msb_5             16      UINT
+    APPEND_ITEM Track_lsb_5             16      UINT
+    
+    APPEND_ITEM Track_msb_6             16      UINT
+    APPEND_ITEM Track_lsb_6             16      UINT
+    
+    APPEND_ITEM Track_msb_7             16      UINT
+    APPEND_ITEM Track_lsb_7             16      UINT
+    
+    APPEND_ITEM Track_msb_8             16      UINT
+    APPEND_ITEM Track_lsb_8             16      UINT
+    
+    APPEND_ITEM Track_msb_9             16      UINT
+    APPEND_ITEM Track_lsb_9             16      UINT
+    
+    APPEND_ITEM Track_msb_10             16      UINT
+    APPEND_ITEM Track_lsb_10             16      UINT
+    
+    APPEND_ITEM Track_msb_11             16      UINT
+    APPEND_ITEM Track_lsb_11             16      UINT
+    
+    APPEND_ITEM Track_msb_12             16      UINT
+    APPEND_ITEM Track_lsb_12             16      UINT
+    
+    APPEND_ITEM Track_msb_13             16      UINT
+    APPEND_ITEM Track_lsb_13             16      UINT
+    
+    APPEND_ITEM Track_msb_14             16      UINT
+    APPEND_ITEM Track_lsb_14             16      UINT
+    
+    APPEND_ITEM Track_msb_15             16      UINT
+    APPEND_ITEM Track_lsb_15             16      UINT
+    
+    APPEND_ITEM Track_msb_16             16      UINT
+    APPEND_ITEM Track_lsb_16             16      UINT
+    
+    APPEND_ITEM Track_msb_17             16      UINT
+    APPEND_ITEM Track_lsb_17             16      UINT
+    
+    APPEND_ITEM Track_msb_18             16      UINT
+    APPEND_ITEM Track_lsb_18             16      UINT
+    
+    APPEND_ITEM Track_msb_19             16      UINT
+    APPEND_ITEM Track_lsb_19             16      UINT
+    
+    APPEND_ITEM Track_msb_20             16      UINT
+    APPEND_ITEM Track_lsb_20             16      UINT
+    
+    APPEND_ITEM Track_msb_21             16      UINT
+    APPEND_ITEM Track_lsb_21             16      UINT
+    
+    APPEND_ITEM Track_msb_22             16      UINT
+    APPEND_ITEM Track_lsb_22             16      UINT
+    
+    APPEND_ITEM Track_msb_23             16      UINT
+    APPEND_ITEM Track_lsb_23             16      UINT
+    
+    APPEND_ITEM Track_msb_24             16      UINT
+    APPEND_ITEM Track_lsb_24             16      UINT
+    
+    APPEND_ITEM Track_msb_25             16      UINT
+    APPEND_ITEM Track_lsb_25             16      UINT
+    
+    APPEND_ITEM Track_msb_26             16      UINT
+    APPEND_ITEM Track_lsb_26             16      UINT
+    
+    APPEND_ITEM Track_msb_27             16      UINT
+    APPEND_ITEM Track_lsb_27             16      UINT
+    
+    APPEND_ITEM Track_msb_28             16      UINT
+    APPEND_ITEM Track_lsb_28             16      UINT
+    
+    APPEND_ITEM Track_msb_29             16      UINT
+    APPEND_ITEM Track_lsb_29             16      UINT
+    
+    APPEND_ITEM Track_msb_30             16      UINT
+    APPEND_ITEM Track_lsb_30             16      UINT
+    
+    APPEND_ITEM Track_msb_31             16      UINT
+    APPEND_ITEM Track_lsb_31             16      UINT
+    
+    APPEND_ITEM Track_msb_32             16      UINT
+    APPEND_ITEM Track_lsb_32             16      UINT
+    
+    APPEND_ITEM Track_msb_33             16      UINT
+    APPEND_ITEM Track_lsb_33             16      UINT
+    
+    APPEND_ITEM Track_msb_34             16      UINT
+    APPEND_ITEM Track_lsb_34             16      UINT
+    
+    APPEND_ITEM Track_msb_35             16      UINT
+    APPEND_ITEM Track_lsb_35             16      UINT
+    
+    APPEND_ITEM Track_msb_36             16      UINT
+    APPEND_ITEM Track_lsb_36             16      UINT
+    
+    APPEND_ITEM Track_msb_37             16      UINT
+    APPEND_ITEM Track_lsb_37             16      UINT
+    
+    APPEND_ITEM Track_msb_38             16      UINT
+    APPEND_ITEM Track_lsb_38             16      UINT
+    
+    APPEND_ITEM Track_msb_39             16      UINT
+    APPEND_ITEM Track_lsb_39             16      UINT
+    
+    APPEND_ITEM Track_msb_40             16      UINT
+    APPEND_ITEM Track_lsb_40             16      UINT
+    
+    APPEND_ITEM Track_msb_41             16      UINT
+    APPEND_ITEM Track_lsb_41             16      UINT
+    
+    APPEND_ITEM Track_msb_42             16      UINT
+    APPEND_ITEM Track_lsb_42             16      UINT
+    
+    APPEND_ITEM Track_msb_43             16      UINT
+    APPEND_ITEM Track_lsb_43             16      UINT
+    
+    APPEND_ITEM Track_msb_44             16      UINT
+    APPEND_ITEM Track_lsb_44             16      UINT
+    
+    APPEND_ITEM Track_msb_45             16      UINT
+    APPEND_ITEM Track_lsb_45             16      UINT
+    
+    APPEND_ITEM Track_msb_46             16      UINT
+    APPEND_ITEM Track_lsb_46             16      UINT
+    
+    APPEND_ITEM Track_msb_47             16      UINT
+    APPEND_ITEM Track_lsb_47             16      UINT
+    
+    APPEND_ITEM Track_msb_48             16      UINT
+    APPEND_ITEM Track_lsb_48             16      UINT
+    
+    APPEND_ITEM Track_msb_49             16      UINT
+    APPEND_ITEM Track_lsb_49             16      UINT
+    
+    APPEND_ITEM Track_msb_50             16      UINT
+    APPEND_ITEM Track_lsb_50             16      UINT
+    
+    APPEND_ITEM Track_msb_51             16      UINT
+    APPEND_ITEM Track_lsb_51             16      UINT
+    
+    APPEND_ITEM Track_msb_52             16      UINT
+    APPEND_ITEM Track_lsb_52             16      UINT
+    
+    APPEND_ITEM Track_msb_53             16      UINT
+    APPEND_ITEM Track_lsb_53             16      UINT
+    
+    APPEND_ITEM Track_msb_54             16      UINT
+    APPEND_ITEM Track_lsb_54             16      UINT
+    
+    APPEND_ITEM Track_msb_55             16      UINT
+    APPEND_ITEM Track_lsb_55             16      UINT
+    
+    APPEND_ITEM Track_msb_56             16      UINT
+    APPEND_ITEM Track_lsb_56             16      UINT
+    
+    APPEND_ITEM Track_msb_57             16      UINT
+    APPEND_ITEM Track_lsb_57             16      UINT
+    
+    APPEND_ITEM Track_msb_58             16      UINT
+    APPEND_ITEM Track_lsb_58             16      UINT
+    
+    APPEND_ITEM Track_msb_59             16      UINT
+    APPEND_ITEM Track_lsb_59             16      UINT
+    
+    APPEND_ITEM Track_msb_60             16      UINT
+    APPEND_ITEM Track_lsb_60             16      UINT
+    
+    APPEND_ITEM Track_msb_61             16      UINT
+    APPEND_ITEM Track_lsb_61             16      UINT
+    
+    APPEND_ITEM Track_msb_62             16      UINT
+    APPEND_ITEM Track_lsb_62             16      UINT
+    
+    APPEND_ITEM Track_msb_63             16      UINT
+    APPEND_ITEM Track_lsb_63             16      UINT
+    
+    APPEND_ITEM Track_msb_64             16      UINT
+    APPEND_ITEM Track_lsb_64             16      UINT
+    
+    APPEND_ITEM Track_msb_65             16      UINT
+    APPEND_ITEM Track_lsb_65             16      UINT
+    
+    APPEND_ITEM Track_msb_66             16      UINT
+    APPEND_ITEM Track_lsb_66             16      UINT
+    
+    APPEND_ITEM Track_msb_67             16      UINT
+    APPEND_ITEM Track_lsb_67             16      UINT
+    
+    APPEND_ITEM Track_msb_68             16      UINT
+    APPEND_ITEM Track_lsb_68             16      UINT
+    
+    APPEND_ITEM Track_msb_69             16      UINT
+    APPEND_ITEM Track_lsb_69             16      UINT
+    
+    APPEND_ITEM Track_msb_70             16      UINT
+    APPEND_ITEM Track_lsb_70             16      UINT
+    
+    APPEND_ITEM Track_msb_71             16      UINT
+    APPEND_ITEM Track_lsb_71             16      UINT
+    
+    APPEND_ITEM Track_msb_72             16      UINT
+    APPEND_ITEM Track_lsb_72             16      UINT
+    
+    APPEND_ITEM Track_msb_73             16      UINT
+    APPEND_ITEM Track_lsb_73             16      UINT
+    
+    APPEND_ITEM Track_msb_74             16      UINT
+    APPEND_ITEM Track_lsb_74             16      UINT
+    
+    APPEND_ITEM Track_msb_75             16      UINT
+    APPEND_ITEM Track_lsb_75             16      UINT
+    
+    APPEND_ITEM Track_msb_76             16      UINT
+    APPEND_ITEM Track_lsb_76             16      UINT
+    
+    APPEND_ITEM Track_msb_77             16      UINT
+    APPEND_ITEM Track_lsb_77             16      UINT
+    
+    APPEND_ITEM Track_msb_78             16      UINT
+    APPEND_ITEM Track_lsb_78             16      UINT
+    
+    APPEND_ITEM Track_msb_79             16      UINT
+    APPEND_ITEM Track_lsb_79             16      UINT
+    
+    APPEND_ITEM Track_msb_80             16      UINT
+    APPEND_ITEM Track_lsb_80             16      UINT
+    
+    APPEND_ITEM Track_msb_81             16      UINT
+    APPEND_ITEM Track_lsb_81             16      UINT
+    
+    APPEND_ITEM Track_msb_82             16      UINT
+    APPEND_ITEM Track_lsb_82             16      UINT
+    
+    APPEND_ITEM Track_msb_83             16      UINT
+    APPEND_ITEM Track_lsb_83             16      UINT
+    
+    APPEND_ITEM Track_msb_84             16      UINT
+    APPEND_ITEM Track_lsb_84             16      UINT
+    
+    APPEND_ITEM Track_msb_85             16      UINT
+    APPEND_ITEM Track_lsb_85             16      UINT
+    
+    APPEND_ITEM Track_msb_86             16      UINT
+    APPEND_ITEM Track_lsb_86             16      UINT
+    
+    APPEND_ITEM Track_msb_87             16      UINT
+    APPEND_ITEM Track_lsb_87             16      UINT
+    
+    APPEND_ITEM Track_msb_88             16      UINT
+    APPEND_ITEM Track_lsb_88             16      UINT
+    
+    APPEND_ITEM Track_msb_89             16      UINT
+    APPEND_ITEM Track_lsb_89             16      UINT
+    
+    APPEND_ITEM Track_msb_90             16      UINT
+    APPEND_ITEM Track_lsb_90             16      UINT
+    
+    APPEND_ITEM Track_msb_91             16      UINT
+    APPEND_ITEM Track_lsb_91             16      UINT
+    
+    APPEND_ITEM Track_msb_92             16      UINT
+    APPEND_ITEM Track_lsb_92             16      UINT
+    
+    APPEND_ITEM Track_msb_93             16      UINT
+    APPEND_ITEM Track_lsb_93             16      UINT
+    
+    APPEND_ITEM Track_msb_94             16      UINT
+    APPEND_ITEM Track_lsb_94             16      UINT
+    
+    APPEND_ITEM Track_msb_95             16      UINT
+    APPEND_ITEM Track_lsb_95             16      UINT
+    
+    APPEND_ITEM Track_msb_96             16      UINT
+    APPEND_ITEM Track_lsb_96             16      UINT
+    
+    APPEND_ITEM Track_msb_97             16      UINT
+    APPEND_ITEM Track_lsb_97             16      UINT
+    
+    APPEND_ITEM Track_msb_98             16      UINT
+    APPEND_ITEM Track_lsb_98             16      UINT
+    
+    APPEND_ITEM Track_msb_99             16      UINT
+    APPEND_ITEM Track_lsb_99             16      UINT
+    
+    APPEND_ITEM CHECKSUM                16      UINT

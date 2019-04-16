@@ -1,0 +1,4 @@
+#REQUIRE temp_conversion.rb
+#REQUIRE hkadc_conversion.rb
+#REQUIRE hkadc_lpsweep.rb
+#REQUIRE multi_field_bit_conversion.rb

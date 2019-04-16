@@ -1,0 +1,12 @@
+TELEMETRY PI TEST LITTLE_ENDIAN "Test Aggregate Packet"
+    APPEND_ID_ITEM TST_PK_ID 16 UINT 149 "Packet ID which must be 149"
+    APPEND_ITEM    VALUE_A    8   UINT
+    APPEND_ITEM    VALUE_B    8   UINT
+
+    ITEM  HEAD_LENGTH  32  16  UINT
+
+    APPEND_ITEM    VALUE_C    8   UINT
+    APPEND_ITEM    VALUE_D    8   UINT
+#    ITEM TEMP_AVERAGE 0 0 DERIVED "Yo"
+#      READ_CONVERSION multi_field_bit_conversion.rb VALUE_C VALUE_D 
+

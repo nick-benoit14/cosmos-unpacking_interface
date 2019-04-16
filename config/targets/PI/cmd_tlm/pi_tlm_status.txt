@@ -1,0 +1,133 @@
+# found at C:\Users\SPORT\Desktop\SPORT\SPORT_COSMOS\config\targets\PI\cmd_tlm
+
+TELEMETRY PI Status LITTLE_ENDIAN "Status Packet"
+    ID_ITEM HEAD_APID                   13  11  UINT 32 "Expected APID for Status Packet 0x20"
+    ITEM HEAD_SecHeaderFlag             12  1   UINT                                                
+    ITEM HEAD_PktType                   11  1   UINT
+    ITEM HEAD_VERSION                   8   3   UINT
+    ITEM HEAD_SeqCount                  26  14  UINT 
+    ITEM HEAD_Sequence                  24  2   UINT
+    ITEM HEAD_LENGTH                    32  16  UINT
+
+    ITEM SysClock                       48  32  UINT
+
+    APPEND_ITEM RTC_Hundredths          8   UINT
+    APPEND_ITEM RTC_Seconds             8   UINT
+    APPEND_ITEM RTC_Minutes             8   UINT
+    APPEND_ITEM RTC_Hours(24)           8   UINT
+    APPEND_ITEM RTC_Date                8   UINT
+    APPEND_ITEM RTC_Months              8   UINT
+    APPEND_ITEM RTC_Weekdays            8   UINT
+    APPEND_ITEM RTC_Years               8   UINT
+
+    APPEND_ITEM PPS_SysClock            32   UINT
+
+    APPEND_ITEM PPS_RTC_Hundredths      8   UINT
+    APPEND_ITEM PPS_RTC_Seconds         8   UINT
+    APPEND_ITEM PPS_RTC_Minutes         8   UINT
+    APPEND_ITEM PPS_RTC_Hours(24)       8   UINT
+    APPEND_ITEM PPS_RTC_Date            8   UINT
+    APPEND_ITEM PPS_RTC_Months          8   UINT
+    APPEND_ITEM PPS_RTC_Weekdays        8   UINT
+    APPEND_ITEM PPS_RTC_Years           8   UINT
+
+    APPEND_ITEM PPS_GPS_Week            16  UINT
+    APPEND_ITEM PPS_GPS_ms              32  UINT
+
+    APPEND_ITEM HKADC_5v                16  UINT
+        READ_CONVERSION hkadc_conversion.rb 0.35
+        UNITS Volts V
+		# these limits are as follows: lower red, lower yellow, upper yellow, upper red, lower green, upper green
+		LIMITS DEFAULT 1 ENABLED 4.0 4.6 5.4 6.0 #4.8 5.2
+    APPEND_ITEM HKADC_+1.8vA            16  UINT
+        READ_CONVERSION hkadc_conversion.rb 1
+        UNITS Volts V
+		LIMITS DEFAULT 1 ENABLED 1.4 1.6 2.0 2.2 #1.7 1.9
+    APPEND_ITEM HKADC_1.8vD             16  UINT
+        READ_CONVERSION hkadc_conversion.rb 1
+        UNITS Volts V
+		LIMITS DEFAULT 1 ENABLED 1.4 1.6 2.0 2.2 #1.7 1.9
+    APPEND_ITEM HKADC_+4.5vA            16  UINT
+        READ_CONVERSION hkadc_conversion.rb 0.35
+        UNITS Volts V
+		LIMITS DEFAULT 1 ENABLED 4.0 4.3 4.7 5.0 #4.4 4.6
+    APPEND_ITEM HKADC_5vCURR            16  UINT
+        READ_CONVERSION hkadc_conversion.rb 1
+        UNITS Amps A
+		LIMITS DEFAULT 1 ENABLED 0.0 0.01 0.09 0.1 #0.04 0.06
+    APPEND_ITEM HKADC_+1.8vACURR        16  UINT
+        READ_CONVERSION hkadc_conversion.rb 1
+        UNITS Amps A
+		LIMITS DEFAULT 1 ENABLED 0.0 0.01 0.05 0.06 #0.04 0.06
+    APPEND_ITEM HKADC_1.8vDCURR         16  UINT
+        READ_CONVERSION hkadc_conversion.rb 1
+        UNITS Amps A
+		LIMITS DEFAULT 1 ENABLED 0.0 0.001 0.029 0.03 #0.04 0.06		
+    APPEND_ITEM HKADC_+4.5vACURR        16  UINT
+        READ_CONVERSION hkadc_conversion.rb 1
+        UNITS Amps A
+		LIMITS DEFAULT 1 ENABLED 0.0 0.001 0.029 0.03 #0.04 0.06
+    APPEND_ITEM HKADC_LP_SWEEP          16  UINT
+        READ_CONVERSION hkadc_lpsweep.rb
+        UNITS Volts V
+		LIMITS DEFAULT 1 ENABLED -3.0 -2.1 3.1 4.0 #-2.0 3.0
+    APPEND_ITEM HKADC_-1.8vA            16  UINT
+        READ_CONVERSION hkadc_conversion.rb 0.727
+        UNITS Volts V
+		LIMITS DEFAULT 1 ENABLED -2.2 -2.0 -1.6 -1.4 #-1.9 -1.7
+    APPEND_ITEM HKADC_3.3vD             16  UINT
+        READ_CONVERSION hkadc_conversion.rb 0.5
+        UNITS Volts V
+		LIMITS DEFAULT 1 ENABLED 2.5 3.0 3.6 4.0 #3.2 3.4
+    APPEND_ITEM HKADC_-4.5vCURR         16  UINT
+        READ_CONVERSION hkadc_conversion.rb 1
+        UNITS Amps  A
+		LIMITS DEFAULT 1 ENABLED 0.0 0.01 0.09 0.1 #0.04 0.06
+    APPEND_ITEM HKADC_-1.8vACURR        16  UINT
+        READ_CONVERSION hkadc_conversion.rb 1
+        UNITS Amps A
+		LIMITS DEFAULT 1 ENABLED 0.0 0.01 0.09 0.1 #0.04 0.06
+    APPEND_ITEM HKADC_3.3vDCURR         16  UINT
+        READ_CONVERSION hkadc_conversion.rb 1
+        UNITS Amps A
+		LIMITS DEFAULT 1 ENABLED 0.0 0.01 0.09 0.1 #0.04 0.06
+    APPEND_ITEM HKADC_-4.5vA            16  UINT
+        READ_CONVERSION hkadc_conversion.rb 0.35
+        UNITS Volts V
+		LIMITS DEFAULT 1 ENABLED -5.0 -4.7 -4.3 -4.0 #-4.6 -4.4
+    APPEND_ITEM TEMP_U60                16  UINT
+        READ_CONVERSION temp_conversion.rb
+        UNITS Celsius C
+		LIMITS DEFAULT 1 ENABLED -10 5.0 35.0 40.0 #10.0 30.0
+    APPEND_ITEM TEMP_U55                16  UINT
+        READ_CONVERSION temp_conversion.rb
+        UNITS Celsius C
+		LIMITS DEFAULT 1 ENABLED -10 5.0 35.0 40.0 #10.0 30.0
+    APPEND_ITEM TEMP_U48                16  UINT
+        READ_CONVERSION temp_conversion.rb
+        UNITS Celsius C
+		LIMITS DEFAULT 1 ENABLED -10 5.0 35.0 40.0 #10.0 30.0
+    APPEND_ITEM TEMP_U49                16  UINT
+        READ_CONVERSION temp_conversion.rb
+        UNITS Celsius C
+		LIMITS DEFAULT 1 ENABLED -10 5.0 35.0 40.0 #10.0 30.0
+    
+    APPEND_ITEM Current_Science_Mode    8   UINT
+    APPEND_ITEM Bad_Command_Count       8   UINT
+    APPEND_ITEM Sys_Clock_Science_Mode  32  UINT
+
+    APPEND_ITEM Status_in_Buffer        16  UINT
+    APPEND_ITEM Science_in_Buffer       16  UINT
+    APPEND_ITEM SLP_Sweep_in_Buffer     16  UINT
+    APPEND_ITEM SIP_Sweep_in_Buffer     16  UINT
+    APPEND_ITEM Tracking_in_Buffer      16  UINT
+    APPEND_ITEM Wave_in_Buffer          16  UINT
+
+    APPEND_ITEM Status_Pkts_Lost        16  UINT
+    APPEND_ITEM Science_Pkts_Lost       16  UINT
+    APPEND_ITEM SLP_Sweep_Pkts_Lost     16  UINT
+    APPEND_ITEM SIP_Sweep_Pkts_Lost     16  UINT
+    APPEND_ITEM Tracking_Pkts_Lost      16  UINT
+    APPEND_ITEM Wave_Pkts_Lost          16  UINT
+
+    APPEND_ITEM CHECKSUM                16  UINT             
