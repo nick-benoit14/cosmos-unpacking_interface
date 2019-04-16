@@ -1,5 +1,3 @@
-#require 'aggregate_packet_mapper'
-#require 'base_name_map'
 
 module Cosmos
 
