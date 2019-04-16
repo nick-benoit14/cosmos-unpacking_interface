@@ -1,10 +1,10 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "unpacking_interface/version"
+require "cosmos/unpacking_interface/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "unpacking_interface"
+  spec.name          = "cosmos-unpacking_interface"
   spec.version       = UnpackingInterface::VERSION
   spec.authors       = ["Nick Benoit"]
   spec.email         = ["nick.benoit14@gmail.com"]

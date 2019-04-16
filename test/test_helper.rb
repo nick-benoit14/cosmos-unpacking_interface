@@ -1,2 +1,2 @@
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-require "unpacking_interface"
+require "cosmos/unpacking_interface"
