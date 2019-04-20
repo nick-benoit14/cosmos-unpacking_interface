@@ -38,7 +38,7 @@ require 'cosmos/unpacking_interface'
 # Example AggregatePacketMapper. This class encapsulates specific assumptions
 # that can be made in mapping an aggregate packet into a BaseNameMap
 module Cosmos
-class SportPacketMapper < AggregatePacketMapper
+class MyPacketMapper < AggregatePacketMapper
 
   ##
   # Maps an item name like 'VALUE_A_42' => 'VALUE_A'

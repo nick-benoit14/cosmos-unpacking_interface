@@ -4,30 +4,6 @@ require 'cosmos/interfaces/tcpip_server_interface'
 
 
 module Cosmos
-
-# We don't create the interface object, so the user should redefine an interface that extends ours but overrides pkt map transforms 
-
-## 
-# Maps aggregate packets (packets with many granules) to simple packets (packets with a single granule)
-# should have the form 'AggregatePacket' => 'SimplePacket'
-# For example: 'Science' => 'Science2'
-#AGG_PKT_MAP = { 'TEST_1' => 'TEST',
-#  'TEST_2' => 'TEST',
-#  'Science' => 'Science2'
-#}
-
-# 
-# Transformations defined on an item in a simple packet. Entries should be of the
-# form: "<TARGET>-<PACKET_NAME>-<ITEM_NAME>" => Proc
-# where the proc can accept the following parameters TargetName, ItemName, key, value, index
-# index is the index of the granule in the aggregate packet that was transformed into the simple packet
-# More info about procs can be found here: https://ruby-doc.org/core-2.4.1/Proc.html
-#TRANSFORMS = {   
-#  'PI-TEST-VALUE_D' => TimeTransformer.build_transform(1), # num milliseconds to advance clock for each granule
-#  'PI-Science2-SYSCLOCK' => TimeTransformer.build_transform(10)
-#}
-
-
 ## 
 # A custom interface that unpacks aggregate packets (packets with many granules) into many 
 # simple packets (packets with a single granule). This way we can use all the cosmos niceties 
@@ -35,19 +11,32 @@ module Cosmos
 # packet into many packets that are stored in a queue that is read from. When the queue is empty 
 # we look for new aggregate packets
 class UnpackingInterface < TcpipServerInterface
-
+  ##
+  # Transformations defined on an item in a simple packet. Entries should be of the
+  # form: "<TARGET>-<PACKET_NAME>-<ITEM_NAME>" => Proc
+  # where the proc can accept the following parameters TargetName, ItemName, key, value, index
+  # index is the index of the granule in the aggregate packet that was transformed into the simple packet
+  # More info about procs can be found here: https://ruby-doc.org/core-2.4.1/Proc.html
   def transforms
     {}
   end
 
+  ## 
+  # Maps aggregate packets (packets with many granules) to simple packets (packets with a single granule)
+  # should have the form 'AggregatePacket' => 'SimplePacket'
+  # For example: 'Science' => 'Science2'
   def agg_pkt_map
     {}
   end
 
+  ##
+  # Cosmos target interface is being used with
   def target
    ""
   end
 
+  ##
+  # Create and return a new instance of your own custom PacketMapper
   def packet_mapper
     PacketMapper.new
   end
