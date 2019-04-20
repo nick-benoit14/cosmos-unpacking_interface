@@ -29,7 +29,7 @@ Or install it yourself as:
 
 ## Usage
 
-You will likely need to define your own custom PacketMapper. A PacketMapper handles mapping a cosmos packet into our internal representation, a `BaseNameMap`. An example is given here:
+You will likely need to define your own custom PacketMapper. A PacketMapper handles mapping a cosmos packet into our internal representation, a `BaseNameMap`. As an example you can look at the Rdoc generated docs in the `docs` folder of this repository. An example is given here:
 
 ```
 require 'cosmos/unpacking_interface' 
@@ -119,7 +119,7 @@ TRANSFORMS = {
 }
 
 
-TARGET = 'MYTARGER'
+TARGET = 'MYTARGET'
 
 class MyInterface < UnpackingInterface
   def transforms
@@ -141,6 +141,7 @@ class MyInterface < UnpackingInterface
 end
 end
 ```
+
 
 ## Development
 
