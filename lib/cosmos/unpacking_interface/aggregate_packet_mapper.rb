@@ -4,6 +4,9 @@
 
 module Cosmos
 class AggregatePacketMapper
+
+  ##
+  # Builds a BaseNameMap from a cosmos aggregate packet
   def build_map(packet)
     BaseNameMap.new({}, packet.packet_name)
   end
