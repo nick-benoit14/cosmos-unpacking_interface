@@ -48,6 +48,10 @@ class UnpackingInterface < TcpipServerInterface
    ""
   end
 
+  def packet_mapper
+    PacketMapper.new
+  end
+
   def connect
     @derived_queue = []
     super()
@@ -59,7 +63,7 @@ class UnpackingInterface < TcpipServerInterface
   def process(packet:, target:, agg_packet:, simple_packet:)   
      agg_pkt = System.telemetry.packet(target, agg_packet)
      if(agg_pkt.identify?(packet.buffer))
-       processor = AggregatePacketProcesser.new(SportPacketMapper.new, transforms)
+       processor = AggregatePacketProcesser.new(packet_mapper, transforms)
        agg_pkt.buffer = packet.buffer.clone
        result = processor.unpack(agg_pkt, target, simple_packet)
 
